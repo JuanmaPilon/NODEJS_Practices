@@ -1,2 +1,3 @@
-# NODEJS_Practices
-Bunch of practices made with NodeJS and other technologies
+# NodeJS
+
+This repo is mainly to document my journey in learning NodeJS.
