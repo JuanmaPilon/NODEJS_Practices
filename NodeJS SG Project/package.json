@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-sg-project",
+  "version": "0.0.1",
+  "description": "Practice with Node, Mongo and Express",
+  "main": "app.js",
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "author": "Juanma Pilon",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^1.0.0-beta.3"
+  }
+}
