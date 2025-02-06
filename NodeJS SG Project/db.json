@@ -1,163 +1,180 @@
 {
-    "personas" : [
+  "personas": [
+    {
+      "id": "1",
+      "nombre": "Juan",
+      "apellido": "Perez",
+      "edad": 30,
+      "skills": [
         {
-            "id": 1,
-            "nombre": "Juan",
-            "apellido": "Perez",
-            "edad": 30,
-            "skills": [
-                {
-                    "skill1": "Node"
-                },
-                {
-                    "skill2": "Mongo"
-                },
-                {
-                    "skill3": "Express"
-                }
-            ]
+          "skill1": "Node"
         },
         {
-            "id": 2,
-            "nombre": "Maria",
-            "apellido": "Gomez",
-            "edad": 25,
-            "skills": [
-                {
-                    "skill1": "Node"
-                },
-                {
-                    "skill2": "Mongo"
-                },
-                {
-                    "skill3": "Phython"
-                }
-            ]
+          "skill2": "Mongo"
         },
         {
-            "id": 3,
-            "nombre": "Carlos",
-            "apellido": "Lopez",
-            "edad": 40,
-            "skills": [
-                {
-                    "skill1": "Node"
-                },
-                {
-                    "skill2": "React"
-                },
-                {
-                    "skill3": "MySQL"
-                }
-            ]
-        },
-        {
-            "id": 4,
-            "nombre": "Luis",
-            "apellido": "Rodriguez",
-            "edad": 35,
-            "skills": [
-                {
-                    "skill1": "Node"
-                },
-                {
-                    "skill2": "MySQL"
-                },
-                {
-                    "skill3": "React"
-                }
-            ]
-        },
-        {
-            "id": 5,
-            "nombre": "Ana",
-            "apellido": "Torres",
-            "edad": 20,
-            "skills": [
-                {
-                    "skill1": "Node"
-                },
-                {
-                    "skill2": "React"
-                },
-                {
-                    "skill3": "Mongo"
-                }
-            ]
-        },
-        {
-            "id": 6,
-            "nombre": "Lucia",
-            "apellido": "Garcia",
-            "edad": 45,
-            "skills": [
-                {
-                    "skill1": "Node"
-                },
-                {
-                    "skill2": "Mongo"
-                },
-                {
-                    "skill3": "Express"
-                }
-            ]
-        },
-        {
-            "id": 7,
-            "nombre": "Pedro",
-            "apellido": "Martinez",
-            "edad": 50
-        },
-        {
-            "id": 8,
-            "nombre": "Sofia",
-            "apellido": "Diaz",
-            "edad": 55,
-            "skills": [
-                {
-                    "skill1": "Java"
-                },
-                {
-                    "skill2": "MariaDB"
-                },
-                {
-                    "skill3": "Angular"
-                }
-            ]
-        },
-        {
-            "id": 9,
-            "nombre": "Jorge",
-            "apellido": "Hernandez",
-            "edad": 60,
-            "skills": [
-                {
-                    "skill1": "HTML"
-                },
-                {
-                    "skill2": "N/A"
-                },
-                {
-                    "skill3": "N/A"
-                }
-            ]
-        },
-        {
-            "id": 10,
-            "nombre": "Marta",
-            "apellido": "Moreno",
-            "edad": 65,
-            "skills": [
-                {
-                    "skill1": "CSS"
-                },
-                {
-                    "skill2": "N/A"
-                },
-                {
-                    "skill3": "N/A"
-                }
-            ]
+          "skill3": "Express"
         }
-    ]
+      ]
+    },
+    {
+      "id": "2",
+      "nombre": "Maria",
+      "apellido": "Gomez",
+      "edad": 25,
+      "skills": [
+        {
+          "skill1": "Node"
+        },
+        {
+          "skill2": "Mongo"
+        },
+        {
+          "skill3": "Phython"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "nombre": "Carlos",
+      "apellido": "Lopez",
+      "edad": 40,
+      "skills": [
+        {
+          "skill1": "Node"
+        },
+        {
+          "skill2": "React"
+        },
+        {
+          "skill3": "MySQL"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "nombre": "Luis",
+      "apellido": "Rodriguez",
+      "edad": 35,
+      "skills": [
+        {
+          "skill1": "Node"
+        },
+        {
+          "skill2": "MySQL"
+        },
+        {
+          "skill3": "React"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "nombre": "Ana",
+      "apellido": "Torres",
+      "edad": 20,
+      "skills": [
+        {
+          "skill1": "Node"
+        },
+        {
+          "skill2": "React"
+        },
+        {
+          "skill3": "Mongo"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "nombre": "Lucia",
+      "apellido": "Garcia",
+      "edad": 45,
+      "skills": [
+        {
+          "skill1": "Node"
+        },
+        {
+          "skill2": "Mongo"
+        },
+        {
+          "skill3": "Express"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "nombre": "Pedro",
+      "apellido": "Martinez",
+      "edad": 50
+    },
+    {
+      "id": "8",
+      "nombre": "Sofia",
+      "apellido": "Diaz",
+      "edad": 55,
+      "skills": [
+        {
+          "skill1": "Java"
+        },
+        {
+          "skill2": "MariaDB"
+        },
+        {
+          "skill3": "Angular"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "nombre": "Jorge",
+      "apellido": "Hernandez",
+      "edad": 60,
+      "skills": [
+        {
+          "skill1": "HTML"
+        },
+        {
+          "skill2": "N/A"
+        },
+        {
+          "skill3": "N/A"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "nombre": "Marta",
+      "apellido": "Moreno",
+      "edad": 65,
+      "skills": [
+        {
+          "skill1": "CSS"
+        },
+        {
+          "skill2": "N/A"
+        },
+        {
+          "skill3": "N/A"
+        }
+      ]
+    },
+    {
+      "id": "5008",
+      "nombre": "Juanma",
+      "apellido": "Pilon",
+      "edad": 28,
+      "skills": [
+        {
+          "skill1": "Javascript"
+        },
+        {
+          "skill2": "Node"
+        },
+        {
+          "skill3": "React"
+        }
+      ]
+    }
+  ]
 }
