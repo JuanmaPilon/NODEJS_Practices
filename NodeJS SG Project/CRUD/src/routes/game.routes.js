@@ -87,4 +87,42 @@ router.put('/:id', getGame, async(req, res) => {
     }
 });
 
+// PATCH by ID
+router.patch('/:id', getGame, async(req, res) => {
+    try {
+        const game = res.game;
+        if (req.body.title) {
+            game.title = req.body.title;
+        }
+        if (req.body.platform) {
+            game.platform = req.body.platform;
+        }
+        if (req.body.score) {
+            game.score = req.body.score;
+        }
+        if (req.body.genre) {
+            game.genre = req.body.genre;
+        }
+        if (req.body.editors_choice) {
+            game.editors_choice = req.body.editors_choice;
+        }
+        const updatedGame = await game.save();
+        res.json(updatedGame);
+    }
+    catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+});
+
+// DELETE by ID
+router.delete('/:id', getGame, async(req, res) => {
+    try {
+        const game = res.game;
+        await game.remove();
+        res.json({ message: 'Juego eliminado' });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+});
+
 module.exports = router;
