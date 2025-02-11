@@ -12,7 +12,7 @@ const gameSchema = new mongoose.Schema({
     score: {
         type: Number,
         required: true
-    },
+    },  
     genre: {
         type: String,
         required: true

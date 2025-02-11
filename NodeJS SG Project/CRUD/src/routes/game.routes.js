@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
         if (games.length === 0) {
             return res.status(204).json([]);
         }
-        res(games);
+        res.json(games);
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
@@ -66,3 +66,25 @@ try {
 
 });
 
+// GET by ID
+router.get('/:id', getGame, async(req, res) => {
+    res.json(res.game);
+});
+
+// PUT by ID
+router.put('/:id', getGame, async(req, res) => {
+    try {
+        const game = res.game;
+        game.title = req.body.title || game.title; // solo actualiza los campos que se envian, sino queda el default, lo mismo para los de abajo
+        game.platform = req.body.platform || game.platform;
+        game.score = req.body.score || game.score;
+        game.genre = req.body.genre || game.genre;
+        game.editors_choice = req.body.editors_choice || game.editors_choice;
+        const updatedGame = await game.save();
+        res.json(updatedGame);
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+});
+
+module.exports = router;
