@@ -2,9 +2,9 @@
   "name": "node_server_ts",
   "version": "0.0.1",
   "description": "node ts server with ts and postgre",
-  "main": "src/app.js",
+  "main": "src/app.ts",
   "scripts": {
-    "dev": "tsnd -- respawn --clear src/app.ts"
+    "dev": "tsnd --respawn --clear src/server.ts"
   },
   "author": "JuanmaPilon",
   "license": "ISC",
