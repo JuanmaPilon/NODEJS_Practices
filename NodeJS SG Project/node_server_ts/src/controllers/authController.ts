@@ -9,9 +9,9 @@ export const register = async (req: Request, res: Response) : Promise<void> => {
     const { email, password } = req.body;
 
     try {
-
-        if (!password) throw new Error('La contrasenia es requerida');
+        
         if (!email) throw new Error('El email es requerido');
+        if (!password) throw new Error('La contrasenia es requerida');
             res.status(400).json({ error: 'El email y la contraseña son requeridos' });
         const hashedPassword =  await hashPassword(password);
         console.log(hashedPassword);
