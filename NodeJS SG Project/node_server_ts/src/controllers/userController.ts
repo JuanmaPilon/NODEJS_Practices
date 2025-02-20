@@ -43,7 +43,7 @@ export const getUserById = async (req: Request, res: Response) : Promise<void> =
         };
         res.status(200).json(user);
     }
-    catch(error:any) {
+    catch(error:any) {+
         res.status(500).json({ error: 'Se produjo un error' });
     }
 };
@@ -71,8 +71,25 @@ export const updateUser = async (req: Request, res: Response) : Promise<void> =>
     if (!user) {
         res.status(404).json({ error: 'Usuario no encontrado' });
     }
+} catch(error:any) {
+    res.status(500).json({ error: 'Se produjo un error' });
 }
-catch(error:any) {
+};
 
-}
+export const deleteUser = async (req: Request, res: Response) : Promise<void> => {
+    const userId = req.params.id;
+    try {
+        const user = await prisma.delete({
+            where: {
+                id: parseInt(userId)
+            }
+        });
+        if (!user) {
+            res.status(404).json({error : 'Usuario no encontrado'});
+        }
+        res.status(200).json();
+    }
+    catch(error:any) {
+        res.status(500).json({ error: 'Se produjo un error'});
+    }
 };
