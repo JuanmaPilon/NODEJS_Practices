@@ -3,6 +3,8 @@ import Product from './models/product.js';
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/products', async (req, res) => {
     try {  const products = await Product.find();
         res.json(products);
