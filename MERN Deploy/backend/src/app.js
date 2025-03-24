@@ -1,16 +1,20 @@
 import express from 'express';
-import mongoose from 'mongoose';
 import Product from './models/product.js';
 
 const app = express();
-const port = process.env.PORT || 3000;
 
 app.get('/products', async (req, res) => {
-    const products = await Product.find();
+    try {  const products = await Product.find();
+        res.json(products);
+    } catch (error) {
+        res.json({ message: error.message });
+    }
+});
+
+app.post('/products', async (req, res) => {
+    const {name, price, description} = req.body;
+    const products = await Product.create({name, price, description});
     res.json(products);
 });
 
-mongoose.connect('mongodb://localhost/mongodbany');
-
-app.listen(port);
-console.log('Server started on: ' + port);
+export default app;
