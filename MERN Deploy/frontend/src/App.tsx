@@ -1,11 +1,13 @@
 import { useEffect,useState } from 'react';
 
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 function App() {
 
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/products')
+    fetch(`${BACKEND_URL}/products`)
     .then(response => response.json())
     .then(data => setProducts(data))
   }, []);
@@ -20,7 +22,7 @@ function App() {
       const price = e.target[1].value;
       const description = e.target[2].value;
 
-      const res = await fetch('http://localhost:3000/products', {
+      const res = await fetch(`${BACKEND_URL}/products`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
