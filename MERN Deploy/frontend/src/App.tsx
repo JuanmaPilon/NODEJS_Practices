@@ -14,12 +14,27 @@ function App() {
     <h1>Products</h1>
     
     <form
-  onSubmit={(e: any) => {
+  onSubmit={async (e) => {
         e.preventDefault();
       const name = e.target[0].value;
       const price = e.target[1].value;
       const description = e.target[2].value;
-  }}
+
+      const res = await fetch('http://localhost:3000/products', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name,
+          price,
+          description,
+        })
+      });
+        const data = await res.json();
+        console.log(data);
+        setProducts([...products, data]);
+      }}
   >
       <input type="text" placeholder='Name'/>
       <input type="text" placeholder='Price'/>
@@ -29,7 +44,7 @@ function App() {
     </form>
     {
       products.map(product => (
-        <div key={product.id} style={
+        <div key={product._id} style={
           {
             border: '1px solid black',
             padding: '10px',
