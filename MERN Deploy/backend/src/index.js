@@ -1,7 +1,6 @@
 import app from './app.js';
 import './db.js';
+import { PORT } from './config.js';
 
-const port = process.env.PORT || 3000;
-
-app.listen(port);
-console.log('Server started on: ' + port);
+app.listen(PORT);
+console.log('Server started on: ' + PORT);
