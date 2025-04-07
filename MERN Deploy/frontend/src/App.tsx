@@ -40,7 +40,7 @@ function App() {
   >
       <input type="text" placeholder='Name'/>
       <input type="text" placeholder='Price'/>
-      <input type="text" placeholder='Description'/>
+    <input type="text" placeholder='Description'/>
       <button type="submit">Create</button>
 
     </form>
